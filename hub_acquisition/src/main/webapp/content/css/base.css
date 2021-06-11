@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+
+
+
+
+
+.cursor_on
+{
+	cursor: pointer
+}
+
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control 
+{
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback 
+{
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+
+
+.btn-no-hover {
+    pointer-events: none;
+}
+
+
+
+
+.blink {
+      animation: blink 0.3s steps(5, start) 3;
+      -webkit-animation: blink 0.3s steps(5, start) 3;
+    }
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+
+
+
+
+/*  bootstrap-year-calendar   */
+
+
+.calendar .month-container 
+{
+	font-size: 14px;
+    float: left;
+    width: 25%;
+    margin-bottom:15px;
+    
+}
+
+
+
+.calendar .month-container .month thead tr:last-child
+{
+	
+	color: black;
+} 
+
+
+
+.calendar .calendar-header table th:nth-child(4)
+{
+    color: black;
+}
+
+
+/*  End of bootstrap-year-calendar   */
+
+
+
+
+#search_table
+{
+	border: 0.5px solid rgba(0,0,0,0.1);
+	border-radius: 12px 12px;
+}
+
+
+#search_table thead tr th
+{
+	padding: 8px 10px;
+	font-weight : 600;
+}
+
+#search_table th
+{
+	color : rgb(0, 97, 242);
+	
+	
+}
+
+
+
+
+
+
+#search_table th:not(:last-child)
+{
+	border-top:0;
+	border-bottom:0;
+	border-left:0;
+	
+/* 	background-color: yellow; */
+}
+
+
+
+#search_table tr
+{
+	border: 0px solid rgba(0,0,0,0.1);
+	cursor:pointer;
+	background: transparent;
+}
+
+#search_table tr:last-child
+{
+	border: 0px solid rgba(0,0,0,0.1);
+	cursor:pointer;
+	border-radius: 8px 8px;
+}
+
+
+
+#search_table td 
+{
+	border: 0.3px solid rgba(0,0,0,0.1);
+	border-bottom: 0px solid rgba(0,0,0,0.1);
+	border-left: 0px solid rgba(0,0,0,0.1);
+    border-right: 0px solid rgba(0,0,0,0.1);
+}
+
+
+#search_table tbody .consignment_id
+{
+	text-transform: uppercase;
+}
+
+
+
+#search_table_filter input
+{
+	border-radius : 7px 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.load-wrapp {
+    float: right;
+
+    text-align: center;
+}
+
+.load-wrapp:last-child {margin-right: 0;}
+
+.load-10 .bar {animation: loadingline 2s cubic-bezier(.17,.37,.43,.67) infinite;}
+
+
+@keyframes loadingline {
+  0%,100% {transform: translate(0,0);}
+  
+  50% {
+      transform: translate(80px,0);
+      background-color: var(--info);
+      width: 25px;
+  }
+}
+
+
+
+.bar {
+    float: left;
+    width: 15px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--info);
+}
+
+
+.barcode_svg
+{
+	display:none;
+}
+
+
+#farmer_id_print
+{
+	 background-color: blue;
+}
+
+
+
