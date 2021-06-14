@@ -1,6 +1,7 @@
 package massdyn.hub.acquisition.model;
 
 import java.time.ZonedDateTime;
+
 import java.util.Date;
 
 import org.springframework.data.annotation.Id;

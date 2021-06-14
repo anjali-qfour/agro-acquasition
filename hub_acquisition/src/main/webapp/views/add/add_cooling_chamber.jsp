@@ -178,8 +178,8 @@
 				<div id="collapse_nav_cooling_chamber" class="collapse show" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 						<h6 class="collapse-header">Select action</h6>
-						<a class="collapse-item active" href="user/search/cooling_chamber">Search & Add</a> 
-						<a class="collapse-item" href="user/search_for_view/cooling_chamber">Search & View</a> 							
+						<a class="collapse-item active" href="user/search/cooling_chamber">Select & Add</a> 
+						<a class="collapse-item" href="user/search_for_view/cooling_chamber">Add & View</a> 							
 					</div>
 				</div>
 			</li>

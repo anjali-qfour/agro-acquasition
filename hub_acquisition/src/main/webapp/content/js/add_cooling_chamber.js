@@ -122,6 +122,12 @@ function save_cooling_chamber_btn_click()
 							
 							setTimeout(function(){
 								
+							console.log(cooling_chamber_id);
+			
+							//window.location = "user/view/cooling_chamber?i="+cooling_chamber_id;
+							
+							window.location = "user/search_for_view/cooling_chamber";
+			
 			
 							}, 1000);
 			

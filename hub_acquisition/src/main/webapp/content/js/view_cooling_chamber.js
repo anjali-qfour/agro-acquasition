@@ -1,7 +1,7 @@
 var cooling_chamber_data=[];
 
 var consignment_ids_list=[];
-
+var consignment_id_list=[];
 var consignment_object=[];
 
 var consignments="";
@@ -73,10 +73,9 @@ function init_view_cooling_chamber()
 			
 			$("#category_select").val(cooling_chamber_data.cooling_chamber);	
 			
-			$("#status_select").val(cooling_chamber_data.status);
+			//$("#status_select").val(cooling_chamber_data.status);
 			
-			
-			//$("#status_select option[data-id="+cooling_chamber_data.status+"]").attr('selected', 'selected');		
+			$("#status_select option[data-id="+cooling_chamber_data.status+"]").attr('selected', 'selected');		
 			
 			console.log(cooling_chamber_data.status);		
 			
@@ -128,19 +127,33 @@ function save_btn_click()
 	$(".update_btn span i").attr("class", "spinner-border spinner-border-sm d-flex mt-1");
 
 
-	for (var j=0; j<cooling_chamber_data.consigment_list.length;j++)
-			{
-				console.log(cooling_chamber_data.consigment_list[j].id);
-				
-				
-				consignment_object.push(cooling_chamber_data.consigment_list[j]);
-				
-				console.log(consignment_object);
-												
-			}
+	for(var i=0;i<cooling_chamber_data.consigment_list.length;i++)
+	{
+		var consignment_obj={
+			"id":cooling_chamber_data.consigment_list[i].id
+		};
+		consigment_list.push(consignment_obj);
 	
+		console.log(consigment_list);
+	}	
+	
+	$("#consignment_id_input").val(consigment_list);
 
 		cooling_chamber_data.status = $("#status_select").find(":selected").attr("data-id")
+		
+		var x=$( "#time_input").val();
+		var y=$( "#add_time_input").val()
+		var z= parseInt(x)+parseInt(y);
+		
+		$("#time_input").val(z);
+					
+		cooling_chamber_data.time=$("#time_input").val();	
+		
+		
+		console.log(time);
+		
+		$("#add_time_input").val(0);
+		
 					
 					
 								Promise.all([update_cooling_chamber()]).then(function ([data]){
@@ -164,7 +177,7 @@ function save_btn_click()
 										
 										$(".update_btn span i").attr("class", "fas fa-check");
 													
-										
+										window.location = "user/view/cooling_chamber?i="+cooling_chamber_data.id;
 										
 										
 									}
@@ -274,6 +287,7 @@ function update_cooling_chamber()
     var data = {'message':'error'};
     
 
+
 	
 	$.ajax({
 		type: "POST",
@@ -283,14 +297,14 @@ function update_cooling_chamber()
 	    data:  JSON.stringify({ 
 	    	
 	    		"id" : cooling_chamber_data.id,	
-				"consigment_list": consignment_object,
+				"consigment_list": consigment_list,
 				"cooling_chamber" : cooling_chamber_data.cooling_chamber,	
           		"temperature": cooling_chamber_data.temperature,
 				"humidity":cooling_chamber_data.humidity,
 				"time": cooling_chamber_data.time,
 				"status": cooling_chamber_data.status,
 			
-				"createDate":new Date(cooling_chamber_data.createDate),
+				"createDate":new Date(new Date(cooling_chamber_data.createDate).getTime()),
 				
 			
 	    }),	    

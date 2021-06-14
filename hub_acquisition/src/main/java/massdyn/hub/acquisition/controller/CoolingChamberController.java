@@ -90,7 +90,7 @@ public class CoolingChamberController {
 	
 
 	@ResponseBody
-	@RequestMapping(value ="/update", method = RequestMethod.POST, produces = {"application/json"} )
+	@RequestMapping(value ="/update", method = RequestMethod.POST,consumes = {"application/json"}, produces = {"application/json"} )
 	public String update(@RequestBody CoolingChamber cooling_chamber)
 //	public String add()
 	{

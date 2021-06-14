@@ -68,6 +68,11 @@ public class CoolingChamberService {
 					.toJson(cooling_chamber, CoolingChamber.class) );
 		
 		
+		cooling_chamber.setType("single");
+		
+    	cooling_chamber.setActive(true);
+		
+		
 
 		cooling_chamber.setUpdateDate(new Date());
 		

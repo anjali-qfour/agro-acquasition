@@ -434,7 +434,7 @@ function draw_search_table()
 	//								dom: "Bfrtip",
 	//								select: true,
 	
-									order: [[ 2, "desc" ]],
+									order: [[ 3, "desc" ]],
 									
 									columns: [			
 									            {
@@ -448,9 +448,9 @@ function draw_search_table()
 												
 												{
 													title:"Cooling Chamber",
-													data: "cooling_chamber" ,
+													data: "cooling_chamber",
 													render: function(data, type, row, meta) {
-														return  '<small class="text-monospace text-dark fw-bold " >'+data+'</small>';
+														return  '<span class="text-capitalize text-dark" >'+data+'</span>';
 													}
 													
 												},

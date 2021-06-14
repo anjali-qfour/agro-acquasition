@@ -487,7 +487,7 @@ function draw_search_table()
 													title:"Product Weight",
 													data: "weight" ,
 													render: function(data, type, row, meta) {
-														return  '<small class="text-monospace text-dark fw-bold " >'+data+'</small>';
+														return  '<span class="text-capitalize text-dark" >'+data+'</span>';
 													}
 													
 												},
@@ -587,7 +587,13 @@ function ask_group_btn_click()
 		console.log(consignment_id_list);
 		
 		console.log(consignment_id_url);
+		
+		
+		
 		}
+		
+		
+		
 		
 		$(".ask_group_message").html('Grouping all consignment togather <br>for Cooling Chamber, <span class="font-monospace text-uppercase badge bg-primary"> '+consignment_id_list+'</span> <br><br>');
 	
